@@ -9,7 +9,7 @@ const cors = require('cors');
 const server = express()
 
 server.use(express.json());
-server.use(express.static(path.join(__dirname, 'client/build')))
+server.use(express.static(path.join(__dirname, 'client/build'))) //express.static requires absolute folder path - path.join(__dirname) gets us the current directory
 
 console.log(process.env.NODE_ENV);
 
